@@ -8,3 +8,4 @@ nltk
 datetime
 flask
 flask_cors
+Pillow
