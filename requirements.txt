@@ -6,3 +6,4 @@ typing_extensions
 langgraph==0.2.45
 nltk
 datetime
+flask
