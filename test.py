@@ -65,12 +65,12 @@ def combine_audio_video(video_file="video.mp4", audio_file="audio.mp3", output_f
         print(f"Error combining video and audio: {e}")
 
 # Example usage
-if __name__ == "__main__":
-    text = "This is a sample text-to-speech example for generating videosssssssssss."
-    audio_file = create_audio(text)
+def gen_vid(summary, keywords):
 
-    # Search and download video based on keyword "nature"
-    search_video("weather report something is not here", "video.mp4")
-
-    # Combine downloaded video with audio to create the final video
+    audio_file = create_audio(summary)
+    
+        # Search and download video based on keyword "nature"
+    search_video(keywords, "video.mp4")
+    
+        # Combine downloaded video with audio to create the final video
     combine_audio_video("video.mp4", audio_file)
