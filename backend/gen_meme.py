@@ -10,15 +10,15 @@ import cloudinary.uploader
 
 load_dotenv()
 
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv('ACCESS_TOKEN')
 
 ACCOUNT_ID = os.getenv('ACCOUNT_ID')
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-CLOUDINARY_CLOUD_NAME=os.getenv('CLOUDINARY_CLOUD_NAME')
-CLOUDINARY_API = os.getenv('CLOUDINARY_API')
-CLOUDINARY_SECRET = os.getenv('CLOUDINARY_SECRET')
+CLOUDINARY_CLOUD_NAME=os.getenv('CLOUD_NAME')
+CLOUDINARY_API = os.getenv('API_KEY')
+CLOUDINARY_SECRET = os.getenv('API_SECRET')
 
 
 cloudinary.config( 

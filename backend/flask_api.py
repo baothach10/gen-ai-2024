@@ -9,11 +9,15 @@ from flask_cors import CORS
 import Gemini
 import summarize
 import imageGen
+import gen_meme
 
 
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def hello():
+    return "hello world"
 
 @app.route('/mediastack', methods=['POST'])
 def get_summary_media():
@@ -41,7 +45,8 @@ def get_summary_media():
             "keywords": keywords.split(','),
             "summary": summary,
             "imageUrl": imageGen.generate_image(summary),
-            "citation": citation
+            "citation": citation,
+            "meme": gen_meme.gen_meme(summary)
         })
 
         return res
