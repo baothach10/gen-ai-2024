@@ -71,10 +71,15 @@ def gen_image(prompt: str) -> str:
     imagedata = base64.b64decode(base64_string)
     image = PIL.Image.open(BytesIO(imagedata))
 
+
     res = "test.png"
     image.save(res)    
 
-    return res
+    # Upload the generated image to Cloudinary
+    upload_result = cloudinary.uploader.upload(res)
+    image_url = upload_result.get("secure_url")
+
+    return image_url
 
 
 def generate_image(content: str) -> str:
@@ -84,6 +89,6 @@ def generate_image(content: str) -> str:
     return gen_image(output.content)
 
 
-# example = "Australia increased welfare payments to combat rising living costs.  San Jose utilizes AI to improve government services.  Over-reliance on the finance industry for economic growth is cautioned against, while the UK considers government intervention for Thames Water.  Malawi's food relief program reached 4.5 million people.  Syrian rebels seized the capital, prompting Syrian refugees' return.  Canada's government faces criticism for its treatment of certain citizens, and Yorkshire's top-performing schools were identified based on new GCSE data."
-# generate_image(example)
+example = "Australia increased welfare payments to combat rising living costs.  San Jose utilizes AI to improve government services.  Over-reliance on the finance industry for economic growth is cautioned against, while the UK considers government intervention for Thames Water.  Malawi's food relief program reached 4.5 million people.  Syrian rebels seized the capital, prompting Syrian refugees' return.  Canada's government faces criticism for its treatment of certain citizens, and Yorkshire's top-performing schools were identified based on new GCSE data."
+print(generate_image(example))
 
