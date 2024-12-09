@@ -89,6 +89,6 @@ def generate_image(content: str) -> str:
     return gen_image(output.content)
 
 
-example = "Australia increased welfare payments to combat rising living costs.  San Jose utilizes AI to improve government services.  Over-reliance on the finance industry for economic growth is cautioned against, while the UK considers government intervention for Thames Water.  Malawi's food relief program reached 4.5 million people.  Syrian rebels seized the capital, prompting Syrian refugees' return.  Canada's government faces criticism for its treatment of certain citizens, and Yorkshire's top-performing schools were identified based on new GCSE data."
-print(generate_image(example))
+# example = "Australia increased welfare payments to combat rising living costs.  San Jose utilizes AI to improve government services.  Over-reliance on the finance industry for economic growth is cautioned against, while the UK considers government intervention for Thames Water.  Malawi's food relief program reached 4.5 million people.  Syrian rebels seized the capital, prompting Syrian refugees' return.  Canada's government faces criticism for its treatment of certain citizens, and Yorkshire's top-performing schools were identified based on new GCSE data."
+# print(generate_image(example))
 
