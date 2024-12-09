@@ -1,0 +1,22 @@
+news_queries = [
+    "Latest developments in electric vehicle battery technology",
+    "US presidential election campaign funding scandal",
+    "Climate change impact on global agriculture",
+    "SpaceX Mars mission progress and challenges",
+    "Emerging artificial intelligence regulations in Europe",
+    "COVID-19 vaccine distribution in developing countries", 
+    "Cryptocurrency market volatility and economic implications",
+    "Tensions between China and Taiwan diplomatic relations",
+    "Renewable energy investments in Southeast Asia",
+    "Global supply chain disruptions and economic recovery",
+    "Cybersecurity threats to critical infrastructure",
+    "Amazon rainforest deforestation environmental policies",
+    "Tech industry layoffs and economic uncertainty",
+    "Mental health impacts of social media on teenagers",
+    "Geopolitical tensions in the Middle East",
+    "Breakthrough in quantum computing research",
+    "World Health Organization pandemic preparedness report",
+    "Machine learning applications in medical diagnostics",
+    "United Nations climate change conference outcomes",
+    "Economic sanctions and their impact on international trade"
+]
