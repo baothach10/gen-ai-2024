@@ -12,7 +12,7 @@ function submitPrompt() {
     const responses = [
         { type: 'text', content: 'This is the AI text response.' },
         { type: 'image', content: 'https://via.placeholder.com/300', description: 'Sample image' },
-        { type: 'meme', content: 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Funny+Meme', description: 'Meme image' },
+        { type: 'meme', content: 'https://via.placeholder.com/300/FF0000/FFFFFF?text=RMIT Bruh', description: 'Meme image' },
         { type: 'video', content: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Sample video' },
     ];
 
