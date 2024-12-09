@@ -24,7 +24,8 @@ function submitPrompt() {
         keywords: ["intel"],
         meme: "https://via.placeholder.com/300x200?text=Meme+Placeholder",
         query: "Tell me about latest intel",
-        summary: "Placeholder summary text."
+        summary: "Placeholder summary text.",
+        videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
     };
 
     const summaryBlock = document.createElement('div');
@@ -60,7 +61,7 @@ function submitPrompt() {
     videoBlock.innerHTML = `
         <h2>Video:</h2>
         <video controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="${response.videoUrl}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     `;
