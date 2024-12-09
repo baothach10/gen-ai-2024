@@ -55,7 +55,6 @@ body {
     background-color: #333;
 }
 
-/* Response Section */
 .response-section {
     margin-top: 20px;
 }
@@ -71,7 +70,8 @@ body {
 .response-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px; /* Increased gap between boxes */
+    margin-top: 20px;
 }
 
 .response-block {
@@ -80,6 +80,7 @@ body {
     border-radius: 8px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    margin-bottom: 20px; /* Increased spacing between response blocks */
 }
 
 .response-block h2 {
