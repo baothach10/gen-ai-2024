@@ -1,60 +1,44 @@
 function submitPrompt() {
     const promptInput = document.getElementById('promptInput');
-    const chatWindow = document.getElementById('chatWindow');
     const userMessage = promptInput.value.trim();
-
+    const responseSection = document.getElementById('responseSection');
+    
     if (userMessage === '') return;
 
-    addMessage('user', userMessage);
+    responseSection.innerHTML = '';
+
+    const promptBlock = document.createElement('div');
+    promptBlock.classList.add('query-block');
+    promptBlock.innerHTML = `<h2>Your Query:</h2><p>${userMessage}</p>`;
+    responseSection.appendChild(promptBlock);
+
     promptInput.value = '';
 
-    // Respond placeholder có gì edit cái này, theo JSON nha
+    // Placeholder, mấy ông tạo 1 cái endpoint cho cái này
     const responses = [
-        { type: 'text', content: 'This is the AI text response.' },
-        { type: 'image', content: 'https://via.placeholder.com/300', description: 'Sample image' },
-        { type: 'meme', content: 'https://via.placeholder.com/300/FF0000/FFFFFF?text=RMIT Bruh', description: 'Meme image' },
-        { type: 'video', content: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Sample video' },
+        { type: 'text', content: 'AI something something.' },
+        { type: 'image', content: 'https://via.placeholder.com/600x300', description: 'Something AI' },
+        { type: 'meme', content: 'https://via.placeholder.com/300/FF0000/FFFFFF?text=RMIT+Bruh+Bruh+Lmao', description: 'Meme' },
+        { type: 'video', content: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Deepface video' },
     ];
 
-    let delay = 1000; 
+    const responseGrid = document.createElement('div');
+    responseGrid.classList.add('response-grid');
 
-    responses.forEach((response) => {
-        setTimeout(() => {
-            addMessage('ai', response);
-        }, delay);
-        delay += 1500; 
-    });
-}
+    responses.forEach(response => {
+        const responseBlock = document.createElement('div');
+        responseBlock.classList.add('response-block');
 
-function addMessage(sender, content) {
-    const chatWindow = document.getElementById('chatWindow');
-    const message = document.createElement('div');
-    message.className = `message ${sender}`;
-
-    const messageContent = document.createElement('div');
-    messageContent.className = 'message-content';
-
-    if (typeof content === 'string') {
-        messageContent.textContent = content;
-    } else {
-        
-        if (content.type === 'text') {
-            messageContent.textContent = content.content;
-        } else if (content.type === 'image' || content.type === 'meme') {
-            const img = document.createElement('img');
-            img.src = content.content;
-            img.alt = content.description;
-            messageContent.appendChild(img);
-        } else if (content.type === 'video') {
-            const video = document.createElement('video');
-            video.src = content.content;
-            video.controls = true;
-            messageContent.appendChild(video);
+        if (response.type === 'text') {
+            responseBlock.innerHTML = `<h2>Text Response:</h2><p>${response.content}</p>`;
+        } else if (response.type === 'image' || response.type === 'meme') {
+            responseBlock.innerHTML = `<h2>${response.type === 'meme' ? 'Meme Image' : 'Image'}</h2><img src="${response.content}" alt="${response.description}"><p>${response.description}</p>`;
+        } else if (response.type === 'video') {
+            responseBlock.innerHTML = `<h2>Video:</h2><video controls><source src="${response.content}" type="video/mp4"></video><p>${response.description}</p>`;
         }
-    }
 
-    message.appendChild(messageContent);
-    chatWindow.appendChild(message);
+        responseGrid.appendChild(responseBlock);
+    });
 
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    responseSection.appendChild(responseGrid);
 }
