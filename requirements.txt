@@ -1,10 +1,8 @@
 python-dotenv
 requests
-PIL
 cloudinary
 langchain-google-genai==2.0.4
 typing_extensions
-typing
 langgraph==0.2.45
 nltk
 datetime
