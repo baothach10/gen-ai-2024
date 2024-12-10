@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-MEDIA_API_KEY = os.getenv('MEDIASTACK_KEY_NEW')
+MEDIA_API_KEY = "d59c4a2f3cef29329be6181730c4f0f6"
 base_url = 'http://api.mediastack.com/v1/news'
 
 class MediaStack:

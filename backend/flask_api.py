@@ -41,6 +41,7 @@ def get_summary_media():
     try:
         keywords = gemini.get_key_words(query)
         summary, citation = summarize.summarize(query)
+        print(summary)
         res =  jsonify({
             "query": query,
             "keywords": keywords.split(','),
