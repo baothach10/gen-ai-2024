@@ -1,0 +1,14 @@
+python-dotenv
+requests
+cloudinary
+langchain-google-genai==2.0.4
+typing_extensions
+langgraph==0.2.45
+nltk
+datetime
+flask
+flask_cors
+Pillow
+IPython
+gTTS
+moviepy
