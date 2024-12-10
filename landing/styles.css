@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 2px solid #ddd;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.prompt-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+
+.response-section {
+    margin-top: 20px;
+}
+
+.query-block {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.response-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px; /* Increased gap between boxes */
+    margin-top: 20px;
+}
+
+.response-block {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Increased spacing between response blocks */
+}
+
+.response-block h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.response-block p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.response-block img,
+.response-block video {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.response-block .meme-image {
+    max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .prompt-input {
+        width: 80%;
+    }
+
+    .submit-button {
+        padding: 8px 16px;
+    }
+
+    .response-grid {
+        grid-template-columns: 1fr;
+    }
+}
