@@ -4,12 +4,12 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-API_KEY = os.getenv('MEDIASTACK_KEY')
+MEDIA_API_KEY = os.getenv('MEDIASTACK_KEY_NEW')
 base_url = 'http://api.mediastack.com/v1/news'
 
 class MediaStack:
     def __init__(self):
-        self.api_key = API_KEY
+        self.api_key = MEDIA_API_KEY
 
     def get_news(self,keywords, date, language):
         params = {
@@ -19,7 +19,7 @@ class MediaStack:
             'keywords': keywords,
             'limit': 10
         }
-
+        # print(params)
         response = requests.get(base_url, params=params)
         data = response.json()
         return data

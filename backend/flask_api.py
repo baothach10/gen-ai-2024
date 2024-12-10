@@ -10,6 +10,7 @@ import Gemini
 import summarize
 import imageGen
 import gen_meme
+import vidGen
 
 
 app = Flask(__name__)
@@ -46,7 +47,8 @@ def get_summary_media():
             "summary": summary,
             "imageUrl": imageGen.generate_image(summary),
             "citation": citation,
-            "meme": gen_meme.gen_meme(summary)
+            "meme": gen_meme.gen_meme(summary),
+            "videoUrl": vidGen.gen_vid(summary, keywords)
         })
 
         return res
